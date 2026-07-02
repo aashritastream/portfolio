@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffdfb;
+  --foreground: #24211f;
+
+  --pink-50: #fbeaf0;
+  --pink-100: #f4c0d1;
+  --pink-200: #ed93b1;
+  --pink-400: #d4537e;
+  --pink-600: #993556;
+  --pink-800: #72243e;
+  --pink-900: #4b1528;
+
+  --coral-50: #faece7;
+  --coral-400: #d85a30;
+  --coral-800: #712b13;
+
+  --purple-50: #eeedfe;
+  --purple-400: #7f77dd;
+  --purple-800: #3c3489;
+
+  --teal-50: #e1f5ee;
+  --teal-400: #1d9e75;
+  --teal-800: #085041;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-editorial);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-pink-50: var(--pink-50);
+  --color-pink-100: var(--pink-100);
+  --color-pink-200: var(--pink-200);
+  --color-pink-400: var(--pink-400);
+  --color-pink-600: var(--pink-600);
+  --color-pink-800: var(--pink-800);
+  --color-pink-900: var(--pink-900);
+
+  --color-coral-50: var(--coral-50);
+  --color-coral-400: var(--coral-400);
+  --color-coral-800: var(--coral-800);
+
+  --color-purple-50: var(--purple-50);
+  --color-purple-400: var(--purple-400);
+  --color-purple-800: var(--purple-800);
+
+  --color-teal-50: var(--teal-50);
+  --color-teal-400: var(--teal-400);
+  --color-teal-800: var(--teal-800);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
