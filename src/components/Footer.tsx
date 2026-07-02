@@ -8,27 +8,24 @@ export function Footer() {
         </p>
         <div className="flex gap-5 text-[13px]">
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:aashrita.natesan@gmail.com"
             className="text-pink-600 hover:underline"
           >
             Email
           </a>
           <a
-            href="https://linkedin.com/in/your-handle"
+            href="https://www.linkedin.com/in/aashrita-natesan/"
             className="text-pink-600 hover:underline"
           >
             LinkedIn
           </a>
           <a
-            href="https://github.com/your-handle"
+            href="https://github.com/aashritastream"
             className="text-pink-600 hover:underline"
           >
             GitHub
           </a>
         </div>
-        <p className="text-[11px] text-foreground/40">
-          Replace the links above with your real email, LinkedIn, and GitHub.
-        </p>
       </div>
     </footer>
   );
