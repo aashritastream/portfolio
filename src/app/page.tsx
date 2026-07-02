@@ -17,7 +17,7 @@ export default function Home() {
               Hi, I&apos;m Aashrita
             </p>
             <h1 className="mt-2 max-w-xl text-[28px] font-medium leading-tight text-balance">
-              I build AI tools that have to work, not just demo well
+              I build AI tools that perform beyond the demo
             </h1>
             <p className="mt-4 max-w-md font-serif text-[15px] leading-relaxed text-foreground/70">
               AI analyst focused on agents, evals, and shipping Claude-powered
