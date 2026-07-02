@@ -3,7 +3,7 @@ export function Footer() {
     <footer id="contact" className="border-t border-black/10">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 py-10 text-center">
         <p className="text-[13px] text-foreground/60">
-          Open to AI engineering roles — always happy to talk about agents, evals, or
+          Open to AI analyst roles — always happy to talk about agents, evals, or
           the projects below.
         </p>
         <div className="flex gap-5 text-[13px]">
