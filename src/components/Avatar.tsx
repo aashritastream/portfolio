@@ -9,7 +9,7 @@ export function Avatar({ size = 128 }: { size?: number }) {
       height={size}
       priority
       className="rounded-full border-2 border-pink-400 object-cover"
-      style={{ width: size, height: size }}
+      style={{ width: size, height: size, objectPosition: "50% 15%" }}
     />
   );
 }
