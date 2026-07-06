@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LockIcon, LockOpenIcon } from "@/components/icons";
+import { LockIcon } from "@/components/icons";
 
 const PASSWORD_HASH =
   "95981161dd2b38ec00eef3736153bd89b182237042f8bdab897c4aa2ca3ef1a6";
@@ -71,17 +71,20 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
 
       {!unlocked && (
         <form onSubmit={handleSubmit} className="mt-6 flex max-w-sm gap-2">
-          <input
-            type="password"
-            required
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-              setError(false);
-            }}
-            placeholder="password"
-            className="w-full border border-black/20 bg-background px-3 py-2 text-[14px] focus:border-foreground focus:outline-none"
-          />
+          <div className="relative w-full">
+            <LockIcon className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-foreground/40" />
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setError(false);
+              }}
+              placeholder="password"
+              className="w-full border border-black/20 bg-background py-2 pl-9 pr-3 text-[14px] focus:border-foreground focus:outline-none"
+            />
+          </div>
           <button
             type="submit"
             className="shrink-0 border border-foreground bg-foreground px-4 py-2 text-[13px] font-medium text-background transition-colors hover:bg-background hover:text-foreground"
@@ -116,16 +119,11 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
                 <h3 className="text-[15px] font-medium">
                   {unlocked ? entry.title : scrambled[i]}
                 </h3>
-                <div className="mt-1 flex items-center gap-1.5 text-[12px] text-foreground/50">
-                  {unlocked ? (
-                    <>
-                      <LockOpenIcon className="h-3.5 w-3.5" />
-                      {entry.company}
-                    </>
-                  ) : (
-                    <LockIcon className="h-3.5 w-3.5" />
-                  )}
-                </div>
+                {unlocked && (
+                  <p className="mt-1 text-[12px] text-foreground/50">
+                    {entry.company}
+                  </p>
+                )}
               </div>
             </div>
           );
