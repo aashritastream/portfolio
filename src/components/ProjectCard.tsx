@@ -1,36 +1,39 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
-
-const accentClasses: Record<Project["accent"], string> = {
-  coral: "bg-coral-50 text-coral-800",
-  purple: "bg-purple-50 text-purple-800",
-  teal: "bg-teal-50 text-teal-800",
-};
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group block rounded-xl border border-black/10 bg-white p-5 transition hover:border-black/20"
+      className="group block border border-black/15 bg-background transition-colors hover:border-black/40"
     >
-      <div
-        className={`mb-4 inline-flex h-8 items-center rounded-md px-2.5 text-[11px] font-medium ${accentClasses[project.accent]}`}
-      >
-        Case study
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-black/15 bg-black/[0.03]">
+        <Image
+          src={project.screenshot}
+          alt={`${project.title} screenshot`}
+          fill
+          className="object-cover object-top grayscale transition-all duration-200 group-hover:grayscale-0"
+        />
       </div>
-      <h3 className="mb-1.5 text-[15px] font-medium">{project.title}</h3>
-      <p className="mb-4 text-[13px] leading-relaxed text-foreground/60">
-        {project.oneLiner}
-      </p>
-      <div className="flex flex-wrap gap-1.5">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-md bg-black/5 px-2 py-0.5 text-[11px] text-foreground/60"
-          >
-            {tag}
+      <div className="p-4">
+        <div className="mb-3 flex flex-wrap items-center gap-1.5">
+          <span className="bg-foreground px-2 py-0.5 text-[10px] uppercase tracking-wider text-background">
+            Case study
           </span>
-        ))}
+          {project.categories.map((category) => (
+            <span
+              key={category}
+              className="border border-black/20 px-2 py-0.5 text-[10px] uppercase tracking-wider text-foreground/60"
+            >
+              {category}
+            </span>
+          ))}
+        </div>
+        <h3 className="mb-1.5 text-[15px] font-medium">{project.title}</h3>
+        <p className="text-[13px] leading-relaxed text-foreground/60">
+          {project.oneLiner}
+        </p>
       </div>
     </Link>
   );

@@ -2,13 +2,15 @@ export type Project = {
   slug: string;
   title: string;
   oneLiner: string;
-  accent: "coral" | "purple" | "teal";
+  categories: string[];
   tags: string[];
   problem: string;
   approach: string[];
   outcome: string;
   stack: string[];
   videoUrl?: string;
+  screenshot: string;
+  githubUrl: string;
 };
 
 export const projects: Project[] = [
@@ -17,7 +19,7 @@ export const projects: Project[] = [
     title: "Job application helper",
     oneLiner:
       "Upload a resume and a job posting, get back a keyword gap analysis and a tailored cover letter.",
-    accent: "coral",
+    categories: ["AI", "Automation"],
     tags: ["Claude API", "FastAPI", "React"],
     problem:
       "Tailoring a resume and cover letter to every job posting is repetitive and easy to do badly under time pressure.",
@@ -31,13 +33,15 @@ export const projects: Project[] = [
     stack: ["FastAPI", "React", "TypeScript", "Claude API"],
     videoUrl:
       "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/job-application-helper-9i5GOjyymMT9MiDBlhaA7KrietAzg9.mp4",
+    screenshot: "/screenshots/job-application-helper.jpg",
+    githubUrl: "https://github.com/aashritastream/job-application-helper",
   },
   {
     slug: "shelter-intake-automation",
     title: "Shelter intake automation",
     oneLiner:
       "Claude-assisted intake and triage for a fictional women's shelter, with a discreet mode built in.",
-    accent: "purple",
+    categories: ["AI", "Automation"],
     tags: ["Claude API", "FastAPI", "React"],
     problem:
       "Intake for a shelter has to move fast, triage accurately, and stay safe for people who may be in danger from whoever is watching their screen.",
@@ -51,13 +55,15 @@ export const projects: Project[] = [
     stack: ["FastAPI", "SQLModel", "React", "Claude API"],
     videoUrl:
       "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/shelter-intake-automation-CI5tOZdsCD3fUYwn9ZfYPG5eiqLSAW.mp4",
+    screenshot: "/screenshots/shelter-intake-automation.jpg",
+    githubUrl: "https://github.com/aashritastream/shelter-intake",
   },
   {
     slug: "compensation-analytics-dashboard",
     title: "Compensation analytics dashboard",
     oneLiner:
       "An AI-powered comp analytics dashboard for a fictional healthcare company, with a natural-language chat interface backed by exact computation.",
-    accent: "teal",
+    categories: ["AI", "Analytics", "HR Tech"],
     tags: ["Claude API", "FastAPI", "pandas", "React"],
     problem:
       "Compensation questions ('average total comp for female physicians in Texas vs. male physicians') are easy to ask in plain English and hard to answer without a real analytics layer underneath.",
@@ -72,6 +78,8 @@ export const projects: Project[] = [
     stack: ["FastAPI", "pandas", "React", "Recharts", "Claude API"],
     videoUrl:
       "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/compensation-analytics-dashboard-aAJCOcHUPfFFK7YkevmTzCGc3jTRD7.mp4",
+    screenshot: "/screenshots/compensation-analytics-dashboard.jpg",
+    githubUrl: "https://github.com/aashritastream/comp-analytics-dashboard",
   },
 ];
 

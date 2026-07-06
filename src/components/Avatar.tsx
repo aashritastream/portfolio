@@ -8,8 +8,13 @@ export function Avatar({ size = 128 }: { size?: number }) {
       width={size}
       height={size}
       priority
-      className="rounded-full border-2 border-pink-400 object-cover"
-      style={{ width: size, height: size, objectPosition: "50% 15%" }}
+      className="grayscale object-cover"
+      style={{
+        width: size,
+        height: size,
+        objectPosition: "50% 15%",
+        border: "1px solid #0a0a0a",
+      }}
     />
   );
 }

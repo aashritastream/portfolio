@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-const body = Inter({
-  variable: "--font-body",
+const mono = JetBrains_Mono({
+  variable: "--font-mono-ui",
   subsets: ["latin"],
 });
 
-const editorial = Source_Serif_4({
-  variable: "--font-editorial",
+const body = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${body.variable} ${editorial.variable} h-full antialiased`}
+      className={`${mono.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

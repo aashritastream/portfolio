@@ -3,7 +3,10 @@ export type Demo = {
   company: string;
   role: string;
   title: string;
+  categories: string[];
   videoUrl: string;
+  screenshot: string;
+  githubUrl: string;
   greeting: string;
   highlights: string[];
 };
@@ -16,8 +19,11 @@ export const demos: Demo[] = [
     company: "Alpaca",
     role: "Support AI Analyst",
     title: "Alpaca support copilot",
+    categories: ["AI", "Automation"],
     videoUrl:
       "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/demos/alpaca-support-analyst-FMtocDzUqPGOyfR0at41PL4AWsW1qL.mp4",
+    screenshot: "/screenshots/alpaca-support-analyst.jpg",
+    githubUrl: "https://github.com/aashritastream/alpaca-support-copilot",
     greeting:
       "Hi Alpaca team — this is a walkthrough built specifically for the Support AI Analyst role, using Alpaca's own public docs as the domain.",
     highlights: [
