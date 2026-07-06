@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LockIcon } from "@/components/icons";
 
 export function Nav() {
   return (
@@ -25,18 +26,28 @@ export function Nav() {
           <NavTab href="/#work" label="Work" />
           <NavTab href="/#contact" label="Contact" />
           <NavTab href="/inquiries" label="Inquiries" />
+          <NavTab href="/client-work" label="Client work" icon={<LockIcon />} />
         </nav>
       </div>
     </header>
   );
 }
 
-function NavTab({ href, label }: { href: string; label: string }) {
+function NavTab({
+  href,
+  label,
+  icon,
+}: {
+  href: string;
+  label: string;
+  icon?: React.ReactNode;
+}) {
   return (
     <Link
       href={href}
-      className="flex items-center border-l border-black/10 px-4 py-3 text-[13px] text-foreground/60 transition-colors hover:bg-black/[0.03] hover:text-foreground"
+      className="flex items-center gap-1.5 border-l border-black/10 px-4 py-3 text-[13px] text-foreground/60 transition-colors hover:bg-black/[0.03] hover:text-foreground"
     >
+      {icon}
       {label}
     </Link>
   );

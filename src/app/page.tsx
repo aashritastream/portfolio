@@ -28,7 +28,7 @@ export default function Home() {
                 <h1 className="text-[36px] font-medium leading-[1.1] tracking-tight sm:text-[44px]">
                   Aashrita Natesan
                 </h1>
-                <p className="mt-3 max-w-md font-serif text-[15px] leading-relaxed text-foreground/70">
+                <p className="mt-3 max-w-md text-[15px] leading-relaxed text-foreground/70">
                   I build AI tools that perform beyond the demo — an AI
                   analyst focused on agents, evals, and shipping Claude-powered
                   products that hold up outside a demo.
