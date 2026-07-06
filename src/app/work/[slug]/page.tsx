@@ -49,6 +49,15 @@ export default async function ProjectPage({
             ))}
           </div>
 
+          {project.videoUrl && (
+            <video
+              className="mt-8 w-full rounded-lg border border-black/10"
+              src={project.videoUrl}
+              controls
+              preload="metadata"
+            />
+          )}
+
           <section className="mt-10">
             <h2 className="mb-2 text-[13px] font-medium text-pink-800">
               The problem

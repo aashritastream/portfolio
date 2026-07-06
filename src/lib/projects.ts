@@ -8,6 +8,7 @@ export type Project = {
   approach: string[];
   outcome: string;
   stack: string[];
+  videoUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -28,6 +29,8 @@ export const projects: Project[] = [
     outcome:
       "A working end-to-end flow from PDF upload to a downloadable, tailored application document.",
     stack: ["FastAPI", "React", "TypeScript", "Claude API"],
+    videoUrl:
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/job-application-helper-9i5GOjyymMT9MiDBlhaA7KrietAzg9.mp4",
   },
   {
     slug: "shelter-intake-automation",
@@ -46,6 +49,8 @@ export const projects: Project[] = [
     outcome:
       "A working intake-to-triage-to-room-assignment flow, with the discreet mode as the deliberate, safety-driven design choice.",
     stack: ["FastAPI", "SQLModel", "React", "Claude API"],
+    videoUrl:
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/shelter-intake-automation-CI5tOZdsCD3fUYwn9ZfYPG5eiqLSAW.mp4",
   },
   {
     slug: "compensation-analytics-dashboard",
@@ -65,6 +70,8 @@ export const projects: Project[] = [
     outcome:
       "6 working dashboard views plus a chat interface that answers ambiguous natural-language questions with numbers that are always exactly right, because Claude never touches the arithmetic.",
     stack: ["FastAPI", "pandas", "React", "Recharts", "Claude API"],
+    videoUrl:
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/compensation-analytics-dashboard-aAJCOcHUPfFFK7YkevmTzCGc3jTRD7.mp4",
   },
 ];
 
