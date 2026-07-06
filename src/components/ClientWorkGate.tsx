@@ -111,21 +111,21 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
                     unlocked ? "grayscale-0" : "grayscale blur-[6px]"
                   }`}
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/45">
-                  {unlocked ? (
-                    <LockOpenIcon className="h-6 w-6 text-white" />
-                  ) : (
-                    <LockIcon className="h-6 w-6 text-white" />
-                  )}
-                </div>
               </div>
               <div className="p-4">
-                <p className="text-[12px] text-foreground/50">
-                  {unlocked ? entry.company : "••••••••"}
-                </p>
-                <h3 className="mt-1 text-[15px] font-medium">
+                <h3 className="text-[15px] font-medium">
                   {unlocked ? entry.title : scrambled[i]}
                 </h3>
+                <div className="mt-1 flex items-center gap-1.5 text-[12px] text-foreground/50">
+                  {unlocked ? (
+                    <>
+                      <LockOpenIcon className="h-3.5 w-3.5" />
+                      {entry.company}
+                    </>
+                  ) : (
+                    <LockIcon className="h-3.5 w-3.5" />
+                  )}
+                </div>
               </div>
             </div>
           );
