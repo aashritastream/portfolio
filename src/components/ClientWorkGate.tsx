@@ -36,7 +36,7 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const [scrambled, setScrambled] = useState<string[]>(() =>
+  const [scrambled] = useState<string[]>(() =>
     entries.map((entry) => scramble(entry.title.length)),
   );
 
@@ -48,14 +48,6 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
       setUnlocked(true);
     }
   }, []);
-
-  useEffect(() => {
-    if (unlocked) return;
-    const interval = setInterval(() => {
-      setScrambled(entries.map((entry) => scramble(entry.title.length)));
-    }, 90);
-    return () => clearInterval(interval);
-  }, [unlocked, entries]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -71,17 +63,8 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
 
   return (
     <div>
-      <div className="flex items-center gap-2.5">
-        {unlocked ? (
-          <LockOpenIcon className="h-5 w-5" />
-        ) : (
-          <LockIcon className="h-5 w-5" />
-        )}
-        <h1 className="text-[26px] font-medium tracking-tight">
-          Client work
-        </h1>
-      </div>
-      <p className="mt-2 max-w-md font-serif text-[15px] leading-relaxed text-foreground/70">
+      <h1 className="text-[26px] font-medium tracking-tight">Client work</h1>
+      <p className="mt-2 max-w-md text-[15px] leading-relaxed text-foreground/70">
         Private walkthroughs built for specific companies. Enter the password
         to view.
       </p>
@@ -122,6 +105,7 @@ export function ClientWorkGate({ entries }: { entries: Entry[] }) {
                   src={entry.screenshot}
                   alt=""
                   fill
+                  priority
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className={`object-cover object-top transition-all ${
                     unlocked ? "grayscale-0" : "grayscale blur-[6px]"
