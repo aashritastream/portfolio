@@ -13,6 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
           src={project.screenshot}
           alt={`${project.title} screenshot`}
           fill
+          sizes="(min-width: 640px) 33vw, 100vw"
           className="object-cover object-top grayscale transition-all duration-200 group-hover:grayscale-0"
         />
       </div>

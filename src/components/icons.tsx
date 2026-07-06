@@ -12,3 +12,39 @@ export function GithubMark({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function LockIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      className={className}
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.3"
+    >
+      <rect x="3" y="7" width="10" height="7" />
+      <path d="M5 7V4.5a3 3 0 0 1 6 0V7" />
+    </svg>
+  );
+}
+
+export function LockOpenIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      className={className}
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.3"
+    >
+      <rect x="3" y="7" width="10" height="7" />
+      <path d="M5 7V4.5a3 3 0 0 1 5.7-1.3" />
+    </svg>
+  );
+}
