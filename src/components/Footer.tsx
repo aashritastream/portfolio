@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-10 text-center">
         <p className="text-[13px] text-foreground/60">
           Open to AI analyst roles — always happy to talk about agents, evals, or
-          the projects below.
+          the projects above.
         </p>
         <div className="flex gap-5 text-[13px]">
           <a
