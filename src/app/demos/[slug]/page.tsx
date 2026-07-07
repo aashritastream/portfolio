@@ -56,7 +56,7 @@ export default async function DemoPage({
           <h1 className="mt-1 text-[26px] font-medium tracking-tight">
             {demo.title}
           </h1>
-          <p className="mt-2 max-w-lg font-serif text-[15px] leading-relaxed text-foreground/70">
+          <p className="mt-2 max-w-lg text-[15px] leading-relaxed text-foreground/70">
             {demo.greeting}
           </p>
 
@@ -77,6 +77,10 @@ export default async function DemoPage({
             controls
             preload="metadata"
           />
+          <p className="mt-2 text-[11px] leading-relaxed text-foreground/50">
+            Disclaimer: all data shown in this demo is synthetic mock data and
+            is not representative of any real person or organization.
+          </p>
 
           <section className="mt-10">
             <h2 className="mb-2 text-[12px] text-foreground/50">

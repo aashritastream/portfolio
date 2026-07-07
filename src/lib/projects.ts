@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "A working end-to-end flow from PDF upload to a downloadable, tailored application document.",
     stack: ["FastAPI", "React", "TypeScript", "Claude API"],
     videoUrl:
-      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/job-application-helper-9i5GOjyymMT9MiDBlhaA7KrietAzg9.mp4",
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/job-application-helper-KyOtrO03uq2QFwNlk0peSZHu1aAfgv.mp4",
     screenshot: "/screenshots/job-application-helper.jpg",
     githubUrl: "https://github.com/aashritastream/job-application-helper",
   },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
       "A working intake-to-triage-to-room-assignment flow, with the discreet mode as the deliberate, safety-driven design choice.",
     stack: ["FastAPI", "SQLModel", "React", "Claude API"],
     videoUrl:
-      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/shelter-intake-automation-CI5tOZdsCD3fUYwn9ZfYPG5eiqLSAW.mp4",
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/shelter-intake-automation-ANxLl0ShYAmDntclAfoGc5hPU8IvQW.mp4",
     screenshot: "/screenshots/shelter-intake-automation.jpg",
     githubUrl: "https://github.com/aashritastream/shelter-intake",
   },
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       "6 working dashboard views plus a chat interface that answers ambiguous natural-language questions with numbers that are always exactly right, because Claude never touches the arithmetic.",
     stack: ["FastAPI", "pandas", "React", "Recharts", "Claude API"],
     videoUrl:
-      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/compensation-analytics-dashboard-aAJCOcHUPfFFK7YkevmTzCGc3jTRD7.mp4",
+      "https://ruvox6zvh1q9m4en.public.blob.vercel-storage.com/work/compensation-analytics-dashboard-byRQW3yHfJieHGEixvU2q1dpAXEKi0.mp4",
     screenshot: "/screenshots/compensation-analytics-dashboard.jpg",
     githubUrl: "https://github.com/aashritastream/comp-analytics-dashboard",
   },

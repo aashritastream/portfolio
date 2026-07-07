@@ -11,7 +11,7 @@ export function Nav() {
           <span className="h-2.5 w-2.5 rounded-full border border-white/60" />
         </div>
         <span className="ml-2 text-[11px] tracking-wide text-white/50">
-          aashritanatesan.dev
+          aashritanatesan.com
         </span>
       </div>
 

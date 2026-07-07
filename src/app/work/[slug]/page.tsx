@@ -51,7 +51,7 @@ export default async function ProjectPage({
           <h1 className="mt-3 text-[26px] font-medium tracking-tight">
             {project.title}
           </h1>
-          <p className="mt-2 max-w-lg font-serif text-[15px] leading-relaxed text-foreground/70">
+          <p className="mt-2 max-w-lg text-[15px] leading-relaxed text-foreground/70">
             {project.oneLiner}
           </p>
 
@@ -77,13 +77,19 @@ export default async function ProjectPage({
           </div>
 
           {project.videoUrl && (
-            <video
-              className="mt-8 w-full border border-black/15"
-              src={project.videoUrl}
-              poster={project.screenshot}
-              controls
-              preload="metadata"
-            />
+            <>
+              <video
+                className="mt-8 w-full border border-black/15"
+                src={project.videoUrl}
+                poster={project.screenshot}
+                controls
+                preload="metadata"
+              />
+              <p className="mt-2 text-[11px] leading-relaxed text-foreground/50">
+                Disclaimer: all data shown in this demo is synthetic mock data
+                and is not representative of any real person or organization.
+              </p>
+            </>
           )}
 
           <section className="mt-10">

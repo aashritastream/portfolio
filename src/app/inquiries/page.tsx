@@ -20,7 +20,7 @@ export default function InquiriesPage() {
           <h1 className="mt-3 text-[26px] font-medium tracking-tight">
             Inquiries
           </h1>
-          <p className="mt-2 max-w-md font-serif text-[15px] leading-relaxed text-foreground/70">
+          <p className="mt-2 max-w-md text-[15px] leading-relaxed text-foreground/70">
             Roles, collaborations, or questions about any of the work here —
             send a note and it&apos;ll land straight in my inbox.
           </p>
