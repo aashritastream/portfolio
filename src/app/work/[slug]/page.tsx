@@ -85,7 +85,7 @@ export default async function ProjectPage({
                 controls
                 preload="metadata"
               />
-              <p className="mt-2 text-[11px] leading-relaxed text-foreground/50">
+              <p className="mt-2 text-[13px] font-medium leading-relaxed text-foreground/80">
                 Disclaimer: all data shown in this demo is synthetic mock data
                 and is not representative of any real person or organization.
               </p>
