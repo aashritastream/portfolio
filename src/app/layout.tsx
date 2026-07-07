@@ -13,9 +13,9 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aashrita Natesan — AI engineering portfolio",
+  title: "Aashrita Natesan — AI Portfolio",
   description:
-    "AI engineer building agents, tools, and products with Claude — case studies from job application, shelter intake, and analytics projects.",
+    "AI analyst building agents, tools, and products with Claude — case studies from job application, shelter intake, and analytics projects.",
 };
 
 export default function RootLayout({
